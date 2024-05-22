@@ -2,20 +2,30 @@ import './Currencies.scss';
 
 function Currencies() {
   return (
-    <main>
-      <h2>Currencies</h2>
-      <ul>
-        <li>Australian Dollar</li>
-        <li>Bulgarian Lev</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-        <li>Brazilian Real</li>
-
+    <main className="main">
+      <h2 className="main-title">Currencies</h2>
+      <ul className="main-list">
+        <li className="main-item">Australian Dollar</li>
+        <li className="main-item">Bulgarian Lev</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
+        <li className="main-item">Brazilian Real</li>
       </ul>
     </main>
   );

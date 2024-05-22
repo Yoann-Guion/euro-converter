@@ -1,5 +1,11 @@
 @use '../../styles/variables' as v;
 
 .App {
-  border: 1px solid;
+  border: 10px solid #f1c5b6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: fit-content;
+  margin: 0 auto;
 }

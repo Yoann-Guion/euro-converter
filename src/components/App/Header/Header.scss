@@ -1,0 +1,17 @@
+.header {
+  background-color: #bb5432;
+  // width: max-content;
+  box-sizing: content-box;
+  text-align: center;
+  padding: 2rem;
+
+  &-title {
+    color: #f1c5b6;
+    font-size: 700;
+  }
+
+  &-p {
+    color: #f1c5b6;
+    font-size: 300;
+  }
+}
