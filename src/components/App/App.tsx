@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Currencies description={currencies.description} code={currencies.code} />
+      <Currencies currencies={currencies} />
       <Result />
     </div>
   );
