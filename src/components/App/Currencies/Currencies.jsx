@@ -1,12 +1,13 @@
 import './Currencies.scss';
 
-// import ICurrency from '../../../@types/currency';
+interface CurrenciesProps {
+  currencies: {
+    description: string,
+    code: string,
+  }[];
+}
 
-// interface CurrenciesProps {
-//   currencies: ICurrency[];
-// }
-
-function Currencies({ currencies }) {
+function Currencies({ currencies }: CurrenciesProps) {
   return (
     <main className="main">
       <h2 className="main-title">Currencies</h2>

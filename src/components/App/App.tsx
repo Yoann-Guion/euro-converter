@@ -1,5 +1,5 @@
 import Header from './Header/Header';
-import Currencies from './Currency/Currencies';
+import Currencies from './Currencies/Currencies';
 import Result from './Result/Result';
 
 import currencies from '../../data/currencies';
