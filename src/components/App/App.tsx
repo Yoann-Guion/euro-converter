@@ -46,7 +46,12 @@ function App() {
         {isCurrenciesDisplayed ? 'Hide' : 'Show'} currencies
       </button>
 
-      {isCurrenciesDisplayed && <Currencies currencies={currencies} />}
+      {isCurrenciesDisplayed && (
+        <Currencies
+          currencies={currencies}
+          setCurrentCurrency={setCurrentCurrency}
+        />
+      )}
 
       <Result
         description={currentCurrency.description}
