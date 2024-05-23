@@ -14,7 +14,7 @@ function App() {
   // --- STATE 1 --- affichage ou non de la liste des monnaies (par défaut on l'affiche)
   const [isCurrenciesDisplayed, setIsCurrenciesDisplayed] = useState(true);
 
-  // --- STATE 2 --- Mode dark ou light (par défaut on utilise le thème light)
+  // --- STATE 2 --- Mode dark ou light (thème light par défaut)
   const [isDark, setIsDark] = useState(false);
 
   // --- STATE 3 --- Devise courante (USD par défaut)

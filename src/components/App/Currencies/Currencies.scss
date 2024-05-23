@@ -5,6 +5,9 @@
   color: v.$color-primary;
   height: 60vh;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: v.$color-alt v.$color-primary;
+  scrollbar-gutter: stable;
 
   &-title {
     padding: 0.5rem;
