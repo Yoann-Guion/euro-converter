@@ -1,4 +1,7 @@
+@use '../../../styles/variables' as v;
+
 .footer {
-  text-align: center;
   padding: 1rem;
+  color: v.$color-primary;
+  text-align: center;
 }

@@ -1,17 +1,18 @@
+@use '../../../styles/variables' as v;
+
 .header {
-  background-color: #bb5432;
-  // width: max-content;
-  box-sizing: content-box;
+  background-color: v.$color-primary;
+  padding: 1rem;
+  color: v.$color-light;
   text-align: center;
-  padding: 2rem;
 
-  &-title {
-    color: #f1c5b6;
-    font-size: 700;
-  }
+  // &-title {
+  //   color: #f1c5b6;
+  //   font-size: 700;
+  // }
 
-  &-p {
-    color: #f1c5b6;
-    font-size: 300;
-  }
+  // &-p {
+  //   color: #f1c5b6;
+  //   font-size: 300;
+  // }
 }

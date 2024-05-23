@@ -1,18 +1,25 @@
+@use '../../../styles/variables' as v;
+
 .main {
-  height: 5%;
-  width: auto;
-  overflow-y: scroll;
-  color: #bb5432;
+  // Définir une taille pour overflow
+  color: v.$color-primary;
+  height: 60vh;
+  overflow-y: auto;
 
   &-title {
-    font-size: 1500;
+    padding: 0.5rem;
   }
 
   &-item {
-    font-size: 500;
+    padding: 0.5rem;
     list-style-type: none;
-    border-bottom: 5px #bb5432;
-    text-align: left;
-    padding: 0.1rem;
+    border-top: 1px solid v.$color-primary;
+    transition: 1s;
+
+    // le style quand la souris passe au dessus du li
+    &:hover {
+      background-color: v.$color-alt;
+      transition: 0.2s;
+    }
   }
 }
