@@ -5,4 +5,8 @@
   margin: 0 auto;
 
   background-color: v.$color-light;
+
+  &-dark {
+    background-color: black;
+  }
 }
