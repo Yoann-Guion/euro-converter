@@ -1,7 +1,7 @@
 import './Header.scss';
 
 interface HeaderProps {
-  isdark: boolean;
+  isDark: boolean;
 }
 
 function Header({ isDark }: HeaderProps) {

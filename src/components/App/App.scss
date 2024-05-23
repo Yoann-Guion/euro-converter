@@ -10,17 +10,33 @@
     width: 80%;
     margin: 0 auto;
 
-    background-color: black;
+    background-color: v.$color-dark;
   }
 
   &-button {
-    align-self: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    padding: 0.4rem;
     color: v.$color-primary;
-    background-color: v.$color-light;
+    background-color: v.$color-dark;
 
     &-dark {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      border-radius: 50%;
+      padding: 0.4rem;
       color: v.$color-alt;
       background-color: v.$color-primary;
     }
+  }
+
+  .currenciesBtn {
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
