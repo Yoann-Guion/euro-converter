@@ -1,10 +1,8 @@
 import { useState } from 'react';
 
-// Import des icones :
-import { ArrowDown, ArrowUp } from 'react-feather';
-
 import TogglerDarkMode from './TogglerDarkMode/TogglerDarkMode';
 import Header from './Header/Header';
+import CurrencyDisplay from './CurrencyDisplay/CurrencyDisplay';
 import Currencies from './Currencies/Currencies';
 import Result from './Result/Result';
 
@@ -28,16 +26,10 @@ function App() {
 
       <Header isDark={isDark} />
 
-      <button
-        className="currenciesBtn"
-        type="button"
-        onClick={() => {
-          setIsCurrenciesDisplayed(!isCurrenciesDisplayed);
-        }}
-      >
-        {isCurrenciesDisplayed ? <ArrowUp /> : <ArrowDown />}{' '}
-        {isCurrenciesDisplayed ? 'Hide' : 'Show'} currencies
-      </button>
+      <CurrencyDisplay
+        isCurrenciesDisplayed={isCurrenciesDisplayed}
+        setIsCurrenciesDisplayed={setIsCurrenciesDisplayed}
+      />
 
       {isCurrenciesDisplayed && (
         <Currencies
