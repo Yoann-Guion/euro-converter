@@ -6,6 +6,13 @@
   color: v.$color-light;
   text-align: center;
 
+  &-dark {
+    background-color: v.$color-dark;
+    padding: 1rem;
+    color: v.$color-light;
+    text-align: center;
+  }
+
   // &-title {
   //   color: #f1c5b6;
   //   font-size: 700;

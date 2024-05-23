@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className={isDark ? 'App-dark' : 'App'}>
-      <Header />
+      <Header isDark={isDark} />
       <button
         className={isDark ? 'App-button' : 'App-button-dark'}
         type="button"

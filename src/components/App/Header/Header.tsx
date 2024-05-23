@@ -1,8 +1,12 @@
 import './Header.scss';
 
-function Header() {
+interface HeaderProps {
+  isdark: boolean;
+}
+
+function Header({ isDark }: HeaderProps) {
   return (
-    <header className="header">
+    <header className={isDark ? 'header-dark' : 'header'}>
       <h1 className="header-title">Converter</h1>
       <p className="header-p">1 euro</p>
     </header>
