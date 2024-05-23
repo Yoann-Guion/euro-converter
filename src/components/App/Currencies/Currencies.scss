@@ -16,9 +16,6 @@
     border-top: 1px solid v.$color-primary;
     transition: 1s;
 
-    &:focus {
-      outline: none !important;
-    }
     // le style quand la souris passe au dessus du li
     &:hover {
       background-color: v.$color-alt;
