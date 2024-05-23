@@ -2,8 +2,8 @@ import './Currencies.scss';
 
 interface CurrenciesProps {
   currencies: {
-    description: string,
-    code: string,
+    description: string;
+    code: string;
   }[];
 }
 
