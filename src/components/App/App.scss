@@ -7,6 +7,20 @@
   background-color: v.$color-light;
 
   &-dark {
+    width: 80%;
+    margin: 0 auto;
+
     background-color: black;
+  }
+
+  &-button {
+    align-self: center;
+    color: v.$color-primary;
+    background-color: v.$color-light;
+
+    &-dark {
+      color: v.$color-alt;
+      background-color: v.$color-primary;
+    }
   }
 }

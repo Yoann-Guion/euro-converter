@@ -16,6 +16,7 @@ function App() {
     <div className={isDark ? 'App-dark' : 'App'}>
       <Header />
       <button
+        className={isDark ? 'App-button' : 'App-button-dark'}
         type="button"
         onClick={() => {
           setIsDark(!isDark);
