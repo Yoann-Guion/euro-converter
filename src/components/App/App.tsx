@@ -13,7 +13,7 @@ function App() {
   const [isDark, setIsDark] = useState(false);
 
   return (
-    <div className="App">
+    <div className={isDark ? 'App-dark' : 'App'}>
       <Header />
       <button
         type="button"
