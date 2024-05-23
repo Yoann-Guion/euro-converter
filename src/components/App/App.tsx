@@ -18,6 +18,9 @@ function App() {
   // --- STATE 2 --- Mode dark :
   const [isDark, setIsDark] = useState(false);
 
+  // --- STATE 3 --- Devise courante
+  const [currentCurrency, setCurrentCurrency] = useState(currencies[30]);
+
   return (
     <div className={isDark ? 'App App-dark' : 'App'}>
       <button
@@ -45,7 +48,10 @@ function App() {
 
       {isCurrenciesDisplayed && <Currencies currencies={currencies} />}
 
-      <Result />
+      <Result
+        description={currentCurrency.description}
+        convertedValue={1 * currentCurrency.rate}
+      />
     </div>
   );
 }
