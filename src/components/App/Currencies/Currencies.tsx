@@ -21,13 +21,16 @@ function Currencies({ currencies, setCurrentCurrency }: CurrenciesProps) {
       <h2 className="main-title">Currencies</h2>
       <ul className="main-list">
         {currencies.map((currency) => (
-          <li
+          <div
+            role="button"
+            tabIndex={0}
             className="main-item"
             key={currency.code}
             onClick={() => setCurrentCurrency(currency)}
+            onKeyDown={() => setCurrentCurrency(currency)}
           >
             {currency.description}
-          </li>
+          </div>
         ))}
       </ul>
     </main>
