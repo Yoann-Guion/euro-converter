@@ -2,13 +2,30 @@ import './Header.scss';
 
 interface HeaderProps {
   isDark: boolean;
+  baseAmount: number;
+  setBaseAmount: React.Dispatch<React.SetStateAction<number>>;
 }
 
-function Header({ isDark }: HeaderProps) {
+function Header({ isDark, baseAmount, setBaseAmount }: HeaderProps) {
   return (
     <header className={isDark ? 'header-dark' : 'header'}>
       <h1 className="header-title">Converter</h1>
-      <p className="header-p">1 euro</p>
+
+      <div className="header-div">
+        <input
+          type="number"
+          placeholder="Amout to convert..."
+          value={baseAmount}
+          onChange={(event) => {
+            const amountInNumber = Number(event.target.value);
+
+            if (!Number.isNaN(amountInNumber)) {
+              setBaseAmount(amountInNumber);
+            }
+          }}
+        />
+        <p className="header-p"> euro</p>
+      </div>
     </header>
   );
 }

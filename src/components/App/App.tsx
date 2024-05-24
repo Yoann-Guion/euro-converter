@@ -20,11 +20,21 @@ function App() {
   // --- STATE 3 --- Devise courante (USD par défaut)
   const [currentCurrency, setCurrentCurrency] = useState(currencies[30]);
 
+  // --- STATE 4 --- Choix du montant dans l'input du header
+  const [baseAmount, setBaseAmount] = useState(1);
+
+  // Calcul de la valeur en fonction du taux
+  const convertedValue = baseAmount * currentCurrency.rate;
+
   return (
     <div className={isDark ? 'App App-dark' : 'App'}>
       <TogglerDarkMode isDark={isDark} setIsDark={setIsDark} />
 
-      <Header isDark={isDark} />
+      <Header
+        isDark={isDark}
+        baseAmount={baseAmount}
+        setBaseAmount={setBaseAmount}
+      />
 
       <CurrencyDisplay
         isCurrenciesDisplayed={isCurrenciesDisplayed}
@@ -38,10 +48,7 @@ function App() {
         />
       )}
 
-      <Result
-        currency={currentCurrency}
-        convertedValue={1 * currentCurrency.rate}
-      />
+      <Result currency={currentCurrency} convertedValue={convertedValue} />
     </div>
   );
 }
