@@ -14,6 +14,7 @@ function Header({ isDark, baseAmount, setBaseAmount }: HeaderProps) {
       <div className="header-div">
         <input
           type="number"
+          className="header-input"
           placeholder="Amout to convert..."
           value={baseAmount}
           onChange={(event) => {
@@ -24,7 +25,7 @@ function Header({ isDark, baseAmount, setBaseAmount }: HeaderProps) {
             }
           }}
         />
-        <p className="header-p"> euro</p>
+        <p className="header-p"> €</p>
       </div>
     </header>
   );

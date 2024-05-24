@@ -19,7 +19,7 @@ function Currencies({ currencies, setCurrentCurrency }: CurrenciesProps) {
     <main className="main">
       <input
         type="text"
-        className="currencies-search"
+        className="main-search"
         placeholder="Search currency ..."
         value={searchValue}
         onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
