@@ -1,18 +1,9 @@
+import ICurrency from '../../../@types/currency';
 import './Currencies.scss';
 
 interface CurrenciesProps {
-  currencies: {
-    description: string;
-    code: string;
-    rate: number;
-  }[];
-  setCurrentCurrency: React.Dispatch<
-    React.SetStateAction<{
-      description: string;
-      code: string;
-      rate: number;
-    }>
-  >;
+  currencies: ICurrency[];
+  setCurrentCurrency: React.Dispatch<React.SetStateAction<ICurrency>>;
 }
 
 function Currencies({ currencies, setCurrentCurrency }: CurrenciesProps) {

@@ -39,7 +39,7 @@ function App() {
       )}
 
       <Result
-        description={currentCurrency.description}
+        currency={currentCurrency}
         convertedValue={1 * currentCurrency.rate}
       />
     </div>

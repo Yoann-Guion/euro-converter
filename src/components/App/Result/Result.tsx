@@ -1,15 +1,18 @@
+import ICurrency from '../../../@types/currency';
 import './Result.scss';
 
 interface ResultProps {
-  description: string;
+  currency: ICurrency;
   convertedValue: number;
 }
 
-function Result({ description, convertedValue }: ResultProps) {
+function Result({ currency, convertedValue }: ResultProps) {
   return (
     <footer className="footer">
-      <h2 className="footer-title">{convertedValue}</h2>
-      <p className="footer-p">{description}</p>
+      <h2 className="footer-title">
+        {convertedValue} {currency.code}
+      </h2>
+      <p className="footer-p">{currency.description}</p>
     </footer>
   );
 }
