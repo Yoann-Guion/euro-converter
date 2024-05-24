@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import ICurrency from '../../../@types/currency';
 import './Currencies.scss';
 
@@ -7,11 +8,28 @@ interface CurrenciesProps {
 }
 
 function Currencies({ currencies, setCurrentCurrency }: CurrenciesProps) {
+  const [searchValue, setSearchValue] = useState('');
+  const filteredList = currencies.filter((currency) => {
+    const descUpper = currency.description.toUpperCase();
+    const serachUpper = searchValue.toUpperCase();
+    return descUpper.includes(serachUpper);
+  });
+
   return (
     <main className="main">
+      <input
+        type="text"
+        className="currencies-search"
+        placeholder="Search currency ..."
+        value={searchValue}
+        onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+          setSearchValue(event.target.value);
+        }}
+      />
+
       <h2 className="main-title">Currencies</h2>
       <ul className="main-list">
-        {currencies.map((currency) => (
+        {filteredList.map((currency) => (
           <div
             role="button"
             tabIndex={0}
