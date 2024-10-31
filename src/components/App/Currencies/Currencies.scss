@@ -1,13 +1,30 @@
 @use '../../../styles/variables' as v;
 
 .main {
-  // Définir une taille pour overflow
   color: v.$color-primary;
   height: 60vh;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: v.$color-alt v.$color-primary;
+  scrollbar-color: v.$color-primary-light v.$color-gray-200;
   scrollbar-gutter: stable;
+
+  &-search {
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: v.$color-gray-50;
+    color: v.$color-gray-900;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  // Version sombre
+  .App-dark & {
+    color: v.$color-accent;
+    scrollbar-color: v.$color-accent v.$color-gray-800;
+  }
 
   &-title {
     padding: 0.5rem;
@@ -16,20 +33,50 @@
   &-search {
     border: none;
     width: 100%;
-    padding: 0.4rem;
+    padding: 0.8rem;
     text-align: center;
+    background-color: v.$color-gray-100;
+    color: v.$color-gray-800;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: 2px solid v.$color-primary-light;
+      background-color: v.$color-light;
+    }
+
+    // Version sombre
+    .App-dark & {
+      background-color: v.$color-gray-800;
+      color: v.$color-gray-100;
+
+      &:focus {
+        outline: 2px solid v.$color-accent;
+        background-color: v.$color-dark;
+      }
+    }
   }
 
   &-item {
-    padding: 0.5rem;
+    padding: 0.8rem;
     list-style-type: none;
-    border-top: 1px solid v.$color-primary;
-    transition: 1s;
+    border-top: 1px solid v.$color-primary-light;
+    transition: all 0.2s ease;
+    cursor: pointer;
 
     // le style quand la souris passe au dessus du li
     &:hover {
-      background-color: v.$color-alt;
-      transition: 0.2s;
+      background-color: v.$color-gray-200;
+      transform: translateX(5px);
+    }
+
+    // Version sombre
+    .App-dark & {
+      border-top: 1px solid v.$color-accent;
+
+      &:hover {
+        background-color: v.$color-gray-800;
+      }
     }
   }
 }

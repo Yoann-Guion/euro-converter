@@ -3,11 +3,15 @@
 @use 'variables' as v;
 
 body {
-  background-color: v.$color-alt;
+  background-color: v.$color-gray-50; // Couleur de fond claire par défaut
   margin: 0;
   font-family: 'League Spartan', cursive;
-}
+  transition: background-color 0.5s ease;
 
+  &.dark-mode {
+    background-color: v.$color-gray-900; // Couleur de fond sombre
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

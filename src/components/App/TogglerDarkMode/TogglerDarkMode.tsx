@@ -1,5 +1,4 @@
 import './TogglerDarkMode.scss';
-
 import { Sun, Moon } from 'react-feather';
 
 interface TogglerDarkModeProps {
@@ -10,11 +9,12 @@ interface TogglerDarkModeProps {
 function TogglerDarkMode({ isDark, setIsDark }: TogglerDarkModeProps) {
   return (
     <button
-      className={isDark ? 'App-button' : 'App-button-dark'}
+      className={`theme-toggle ${
+        isDark ? 'theme-toggle--dark' : 'theme-toggle--light'
+      }`}
       type="button"
-      onClick={() => {
-        setIsDark(!isDark);
-      }}
+      onClick={() => setIsDark(!isDark)}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {isDark ? <Sun /> : <Moon />}
     </button>

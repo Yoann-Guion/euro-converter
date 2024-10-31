@@ -1,7 +1,13 @@
 @use '../../../styles/variables' as v;
 
 .footer {
-  padding: 1rem;
+  padding: 1.5rem;
   color: v.$color-primary;
   text-align: center;
+  transition: color 0.3s ease;
+
+  // Version sombre
+  .App-dark & {
+    color: v.$color-accent;
+  }
 }

@@ -1,4 +1,17 @@
-$color-alt: #f1c5b6;
-$color-primary: #bb5432;
-$color-light: #fff;
-$color-dark: #551e0c;
+// Couleurs principales
+$color-primary: #e85d04; // Orange vif
+$color-primary-light: #f48c06; // Orange clair
+$color-primary-dark: #9d0208; // Rouge foncé
+
+// Couleurs neutres
+$color-light: #fafafa; // Blanc cassé
+$color-gray-50: #fafafa; // Pour le background en mode clair
+$color-gray-100: #f1f1f1; // Gris très clair
+$color-gray-200: #e5e5e5; // Gris clair
+$color-gray-800: #1f1f1f; // Gris très foncé
+$color-gray-900: #212121; // Pour le background en mode sombre
+$color-dark: #1a1a1a; // Gris très foncé
+
+// Couleurs d'accent
+$color-accent: #ffd6a5; // Orange pastel
+$color-accent-dark: #ffb366; // Orange foncé

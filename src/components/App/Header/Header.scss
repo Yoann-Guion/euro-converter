@@ -2,36 +2,61 @@
 
 .header {
   background-color: v.$color-primary;
-  padding: 1rem;
+  min-height: 120px; // Hauteur fixe minimum
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
   color: v.$color-light;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 
   &-dark {
-    background-color: v.$color-dark;
-    padding: 1rem;
-    color: v.$color-light;
-    text-align: center;
+    background-color: v.$color-gray-800; // Au lieu de dark
+    color: v.$color-accent;
   }
+
   &-div {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
   }
 
   &-input {
-    width: 2.5rem;
-    height: 1.6rem;
+    width: 4rem; // Augmentation de la largeur
+    height: 2rem; // Augmentation de la hauteur
+    padding: 0.5rem;
+    font-size: 1.1rem; // Police plus grande
+    text-align: center;
     margin: 0.2rem;
+    border: 2px solid v.$color-primary-light;
+    border-radius: 0.3rem;
+    background-color: v.$color-light;
+    color: v.$color-primary;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: v.$color-primary-dark;
+      box-shadow: 0 0 0 2px rgba(v.$color-primary, 0.2);
+      width: 5rem; // S'élargit au focus
+    }
+
+    // Version sombre
+    .header-dark & {
+      background-color: v.$color-dark;
+      border-color: v.$color-accent;
+      color: v.$color-light;
+
+      &:focus {
+        border-color: v.$color-accent-dark;
+        box-shadow: 0 0 0 2px rgba(v.$color-accent, 0.2);
+      }
+    }
   }
-
-  // &-title {
-  //   color: #f1c5b6;
-  //   font-size: 700;
-  // }
-
-  // &-p {
-  //   color: #f1c5b6;
-  //   font-size: 300;
-  // }
 }
