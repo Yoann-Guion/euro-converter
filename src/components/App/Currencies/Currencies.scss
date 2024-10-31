@@ -2,23 +2,11 @@
 
 .main {
   color: v.$color-primary;
-  height: 60vh;
+  height: 55vh;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: v.$color-primary-light v.$color-gray-200;
   scrollbar-gutter: stable;
-
-  &-search {
-    border: none;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-    background-color: v.$color-gray-50;
-    color: v.$color-gray-900;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-  }
 
   // Version sombre
   .App-dark & {
@@ -33,25 +21,30 @@
   &-search {
     border: none;
     width: 100%;
+    max-width: 100%;
     padding: 0.8rem;
     text-align: center;
-    background-color: v.$color-gray-100;
-    color: v.$color-gray-800;
+    background-color: v.$color-primary;
+    color: v.$color-light;
     border-radius: 0.5rem;
+    overflow: hidden;
     transition: all 0.2s ease;
 
     &:focus {
-      outline: 2px solid v.$color-primary-light;
+      box-sizing: content-box;
+      border: solid 1px;
       background-color: v.$color-light;
+      color: v.$color-primary;
+      outline: none;
     }
 
     // Version sombre
     .App-dark & {
       background-color: v.$color-gray-800;
-      color: v.$color-gray-100;
+      color: v.$color-accent;
 
       &:focus {
-        outline: 2px solid v.$color-accent;
+        border: 1px solid v.$color-accent;
         background-color: v.$color-dark;
       }
     }
@@ -64,7 +57,6 @@
     transition: all 0.2s ease;
     cursor: pointer;
 
-    // le style quand la souris passe au dessus du li
     &:hover {
       background-color: v.$color-gray-200;
       transform: translateX(5px);

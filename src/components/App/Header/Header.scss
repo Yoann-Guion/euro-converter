@@ -7,15 +7,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 1.5rem;
   color: v.$color-light;
-  text-align: center;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 
   &-dark {
-    background-color: v.$color-gray-800; // Au lieu de dark
+    background-color: v.$color-gray-800;
+    min-height: 120px; // Hauteur fixe minimum
+    padding: 1.5rem;
     color: v.$color-accent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
   }
 
   &-div {
@@ -51,7 +60,7 @@
     .header-dark & {
       background-color: v.$color-dark;
       border-color: v.$color-accent;
-      color: v.$color-light;
+      color: v.$color-accent;
 
       &:focus {
         border-color: v.$color-accent-dark;

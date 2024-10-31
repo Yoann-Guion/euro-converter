@@ -1,17 +1,17 @@
-// Couleurs principales
-$color-primary: #e85d04; // Orange vif
-$color-primary-light: #f48c06; // Orange clair
-$color-primary-dark: #9d0208; // Rouge foncé
+// Palette principale (Orange)
+$color-primary: #f97316; // Radix orange9
+$color-primary-light: #fdba74; // Radix orange6
+$color-primary-dark: #c2410c; // Radix orange10
 
-// Couleurs neutres
-$color-light: #fafafa; // Blanc cassé
-$color-gray-50: #fafafa; // Pour le background en mode clair
-$color-gray-100: #f1f1f1; // Gris très clair
-$color-gray-200: #e5e5e5; // Gris clair
-$color-gray-800: #1f1f1f; // Gris très foncé
-$color-gray-900: #212121; // Pour le background en mode sombre
-$color-dark: #1a1a1a; // Gris très foncé
+// Neutres Radix
+$color-light: #f3f4f6; // gris léger pour le fond
+$color-dark: #1f2937; // gris foncé Radix pour le mode sombre
+$color-gray-50: #f9fafb;
+$color-gray-100: #f3f4f6;
+$color-gray-200: #e5e7eb;
+$color-gray-800: #374151;
+$color-gray-900: #111827;
 
-// Couleurs d'accent
-$color-accent: #ffd6a5; // Orange pastel
-$color-accent-dark: #ffb366; // Orange foncé
+// Accent pour le mode sombre
+$color-accent: #fb923c; // Radix orange8
+$color-accent-dark: #ea580c; // Radix orange11

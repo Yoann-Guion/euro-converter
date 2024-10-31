@@ -9,6 +9,7 @@ interface CurrenciesProps {
 
 function Currencies({ currencies, setCurrentCurrency }: CurrenciesProps) {
   const [searchValue, setSearchValue] = useState('');
+
   const filteredList = currencies.filter((currency) => {
     const descUpper = currency.description.toUpperCase();
     const serachUpper = searchValue.toUpperCase();

@@ -4,7 +4,8 @@
   width: min(90%, 1200px); // Responsive avec une largeur maximale
   margin: 0 auto;
   padding: 2rem;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   transition: all 0.3s ease;
   background-color: v.$color-light;
   color: v.$color-gray-800;
@@ -22,7 +23,9 @@
     padding: 0.8rem;
     border: none;
     cursor: pointer;
-    transition: all 0.2s ease;
+    color: v.$color-light;
+    background-color: v.$color-primary;
+    transition: transform 0.3s ease, background-color 0.2s ease;
 
     // Mode clair
     color: v.$color-light;
@@ -41,31 +44,6 @@
       &:hover {
         background-color: v.$color-accent-dark;
         transform: scale(1.05);
-      }
-    }
-  }
-
-  .currenciesBtn {
-    border: none;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 0.5rem;
-    background-color: v.$color-gray-100;
-    transition: all 0.2s ease;
-
-    &:hover {
-      background-color: v.$color-gray-200;
-    }
-
-    .App-dark & {
-      background-color: v.$color-gray-800;
-      color: v.$color-gray-100;
-
-      &:hover {
-        background-color: lighten(v.$color-gray-800, 5%);
       }
     }
   }
